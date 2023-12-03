@@ -1,13 +1,20 @@
 import React from 'react'
 import { useFormik } from 'formik';
-import { validation } from './Validation';
+import {Validation} from "../../Components/Validation"
+import { useNavigate } from 'react-router-dom';
+import "./Register.css"
 
+function Register() {
+  const navigate = useNavigate()
+  const onSubmit = async(values, actions) => {
+    console.log(values);
+    console.log(actions);
+    await new Promise((resolve) => setTimeout(resolve, 1000))
+    //actions.resetForm()
+    navigate("/Entertainment")
+    console.log("showing");
+  }
 
-const onSubmit = () => {
-  console.log("submitted");
-}
-
-function CreateAccount() {
   const { values, errors, touched, handleChange, handleBlur, handleSubmit} = useFormik({
     initialValues: {
       name: "",
@@ -16,9 +23,11 @@ function CreateAccount() {
       mobile: "",
       terms: "flase"
     },
-    validationSchema : validation,
-    onSubmit
+    validationSchema : Validation,
+    onSubmit,
   });
+
+  
  
   return (
     <div className='container'>
@@ -75,7 +84,7 @@ function CreateAccount() {
             />
             {errors.mobile && touched.mobile && <p className="error">{errors.mobile}</p>}
 
-            <div className='check'>
+           {/*} <div className='check'>
             <input 
               value={values.terms} 
               onChange={handleChange}
@@ -86,10 +95,10 @@ function CreateAccount() {
             />
             <p className='termsCheck'>Terms and Conditions</p>
             </div>
-            {errors.terms && touched.terms && <p className="error">{errors.terms}</p>}
+  {errors.terms && touched.terms && <p className="error">{errors.terms}</p>} */}
             
 
-            <button type='submit'>SIGN UP</button>
+            <button onClick={onSubmit} type='submit'>SIGN UP</button>
           </form>
 
         </div>
@@ -108,4 +117,5 @@ function CreateAccount() {
   )
 }
 
-export default CreateAccount;
+
+export default Register;
