@@ -22,7 +22,7 @@ function Browse() {
         <div className='moviesList'>
           <div className='msg'>
             <p>Entertainment according to your choice</p>
-             <div className="homepage"> <button onClick={() => handleClick()}>Home Page</button> </div>
+             <div className="homepage"> <button onClick={() => handleClick()}>HomePage</button> </div>
           </div>  
         </div>
 
