@@ -45,4 +45,4 @@ const Movies = ({ genre }) => {
   );
 };
 
-export default Movies;
+export default Movies
