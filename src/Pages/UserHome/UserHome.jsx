@@ -1,18 +1,25 @@
-import React from 'react'
 import './UserHome.css'
 import { useNavigate } from 'react-router-dom'
 import userImg from '../../Images/userImg.png'
 import News from '../../Components/News'
 import Weather from '../../Components/Weather'
 import Timer from '../../Components/Timer'
+import React, { useEffect, useState } from "react";
 
 function UserHome() {
-
+    const [notes, setNotes] = useState("");
     const navigate = useNavigate() 
     const handelClick = () => {
         navigate('/Browse')
         console.log("showing");
     }
+
+    useEffect(() => {
+        localStorage.setItem("notes", notes);
+      }, [notes]);
+      const handleNotesChange = (e) => {
+        setNotes(e.target.value);
+      };
 
   return (
     <div className='container3'>
@@ -36,10 +43,12 @@ function UserHome() {
                 </div>
                 <div className='notes'>
                     <h4>All Notes</h4>
-                    <input type='textbox'>
-                    
-                    </input>
-
+                    <textarea
+                        className="notes-input"
+                        value={notes}
+                        onChange={handleNotesChange}>
+                        {notes}
+                    </textarea>
                 </div>
             </div>
             <div >

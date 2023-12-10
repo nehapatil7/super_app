@@ -93,21 +93,29 @@
     margin-top: 20px;
 }
 
-.notes input {
-    height: 360px;
+.notes-input {
     width: 320px;
+    height: 360px;
+    background-color: #F1C75B;
+    border: none;
+    outline: none;
     margin-top: 20px;
     margin-left: 22px;
+  }
+  
+textarea::-webkit-scrollbar {
+    width: 1em;
     color: black;
-    background-color: #F1C75B;
-    border: #F1C75B;
 }
-
+textarea::-webkit-scrollbar-thumb {
+    background-color: hsl(43, 100%, 75%); 
+    border-radius: 20px;
+    border: 1px solid #f1c75b; 
+}
 
 .right {
     height: 830px;
     width: 525px;
-   /* background-color: #c3db72;*/
 }
 
 .news {

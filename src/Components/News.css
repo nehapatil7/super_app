@@ -5,23 +5,28 @@
 }
 
 .newsTitle {
-    color: white;
-    font-Size: 18px;
+    color: rgb(217, 213, 213);
+    font-Size: 15px;
     margin-bottom: 10px;
+    margin-left: 20px;
 }
 
 .newsDate {
-    color: white;
+    color: rgb(217, 213, 213);
     font-size: 20px;
     margin-right: 10px;
+    margin-left: 20px;
 }
 
 .newsTime {
-    color: white;
+    color: rgb(217, 213, 213);
     font-Size: 15px; 
     margin-Right: 10px; 
+    margin-left: 20px;
 }
 
 .newsDesc {
     margin-top: 20px;
+    margin-left: 20px;
+    font-Size: 19px;
 }
