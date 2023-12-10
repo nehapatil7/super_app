@@ -57,7 +57,6 @@
 .user {
     height: 260px;
     width: 330px;
-    background-color: #08208a;
     margin-left: 10px;
     margin-top: 10px;
     border-radius: 19px;
@@ -66,7 +65,6 @@
 .selectedgenres {
     height: 140px;
     width: 330px;
-    background-color: #8a4b08;
     margin-top: 120px;
     border-radius: 19px;
 }

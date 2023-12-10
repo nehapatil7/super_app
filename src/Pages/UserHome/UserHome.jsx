@@ -8,11 +8,19 @@ import React, { useEffect, useState } from "react";
 
 function UserHome() {
     const [notes, setNotes] = useState("");
+    const [user, setUser] = useState("");
+    const [genre, setGenre] = useState([]);
     const navigate = useNavigate() 
     const handelClick = () => {
         navigate('/Browse')
         console.log("showing");
     }
+
+    useEffect(() => {
+        setUser(JSON.parse(localStorage.getItem("userData")));
+        setGenre(JSON.parse(localStorage.getItem("selectedGenre")));
+        setNotes(localStorage.getItem("notes"));
+      }, []);
 
     useEffect(() => {
         localStorage.setItem("notes", notes);
@@ -31,8 +39,15 @@ function UserHome() {
                             <img src={userImg} alt="user image" />
                         </div>
                         <div className='user'>
+                            <h2>{user.name}</h2>
+                            <h2>{user.email}</h2>
+                            <h2 className="uname">{user.username}</h2>
                             <div className='selectedgenres'>
-
+                                {genre.map((item, i) => (
+                                <div key={i} className="selectedG">
+                                {item}
+                                </div>
+                            ))}
                             </div>
                         </div>
 

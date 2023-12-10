@@ -7,13 +7,14 @@ import "./Register.css"
 function Register() {
   const navigate = useNavigate()
   const onSubmit = async(values, actions) => {
-    console.log(values);
-    console.log(actions);
     await new Promise((resolve) => setTimeout(resolve, 1000))
-    //actions.resetForm()
-    navigate("/Entertainment")
-    console.log("showing");
+      if (values["terms"] === true) {
+        localStorage.setItem("userData", JSON.stringify(values));
+        navigate("/Entertainment");
+      }
+    
   }
+  
 
   const { values, errors, touched, handleChange, handleBlur, handleSubmit} = useFormik({
     initialValues: {
@@ -21,7 +22,7 @@ function Register() {
       username: "",
       email: "",
       mobile: "",
-      terms: "flase"
+      terms: ""
     },
     validationSchema : Validation,
     onSubmit,
@@ -84,7 +85,7 @@ function Register() {
             />
             {errors.mobile && touched.mobile && <p className="error">{errors.mobile}</p>}
 
-           {/*} <div className='check'>
+            <div className='check'>
             <input 
               value={values.terms} 
               onChange={handleChange}
@@ -95,7 +96,7 @@ function Register() {
             />
             <p className='termsCheck'>Terms and Conditions</p>
             </div>
-  {errors.terms && touched.terms && <p className="error">{errors.terms}</p>} */}
+            {errors.terms && touched.terms && <p className="error">{errors.terms}</p>} 
             
 
             <button onClick={onSubmit} type='submit'>SIGN UP</button>
