@@ -80,44 +80,30 @@ const Timer = () => {
           <div className="hours">
             <p>Hours</p>
             <img className="increaseHour"
-              
               onClick={increaseHour}
-              src={up}
-            />
+              src={up}/>
+           
             <p>{hours}</p>
             <img className="decreaseHour"
-              
               onClick={decreaseHour}
-              src={down}
-            />
+              src={down}/>
           </div>
           <div className="minutes">
             <p>Minutes</p>
-            <img
-              
-              onClick={increaseMinute}
-              src={up}
-            />
+            <img onClick={increaseMinute}
+              src={up} />
             <p>{minutes}</p>
-            <img
-              
-              onClick={decreaseMinute}
-              src={down}
-            />
+            
+            <img onClick={decreaseMinute}
+              src={down} />
           </div>
           <div className="seconds">
             <p>Seconds</p>
-            <img
-              
-              onClick={increaseSecond}
-              src={up}
-            />
+            <img onClick={increaseSecond}
+              src={up} />
             <p>{seconds}</p>
-            <img
-              
-              onClick={decreaseSecond}
-              src={down}
-            />
+            <img onClick={decreaseSecond}
+              src={down} />
           </div>
         </div>
         <div className="start"
