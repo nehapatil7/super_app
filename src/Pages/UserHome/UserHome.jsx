@@ -3,6 +3,7 @@ import './UserHome.css'
 import { useNavigate } from 'react-router-dom'
 import userImg from '../../Images/userImg.png'
 import News from '../../Components/News'
+import Weather from '../../Components/Weather'
 
 function UserHome() {
 
@@ -28,11 +29,8 @@ function UserHome() {
                         </div>
 
                     </div>
-                    <div className='weather'>
-                        <div className='timeDate'>
-
-                        </div>
-
+                    <div> 
+                        <Weather />
                     </div>
                 </div>
                 <div className='notes'>
