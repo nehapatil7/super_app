@@ -6,9 +6,10 @@
 
 .newsTitle {
     color: rgb(217, 213, 213);
-    font-Size: 15px;
+    font-Size: 17px;
     margin-bottom: 10px;
     margin-left: 20px;
+    font-weight: 500;
 }
 
 .newsDate {
@@ -28,5 +29,5 @@
 .newsDesc {
     margin-top: 20px;
     margin-left: 20px;
-    font-Size: 19px;
+    font-Size: 17px;
 }
