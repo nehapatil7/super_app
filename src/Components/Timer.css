@@ -1,0 +1,67 @@
+.timer {
+    width: 865px;
+    height: 250px;
+    background-color: #1E2343;
+    border-radius: 19px;
+    margin-left: 45px; 
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row; 
+}
+
+.circleTimer {
+    margin-left: 40px;
+    margin-top: 35px;
+}
+
+.timer1 {
+    width: 35vw;
+    text-align: center;
+    margin-left: 120px;
+    margin-top: 25px;
+}
+
+.timer2 {
+    color: white;
+    display: flex;
+    font-size: 2rem;
+    justify-content: space-evenly;
+}
+
+.hours {
+    text-align: center; 
+    padding: 6px;
+}
+
+.hours img {
+    width: 20px;
+    height: 20px;
+}
+
+.minutes {
+    text-align: center;
+    padding: 6px;
+}
+
+.minutes img {
+    width: 20px;
+    height: 20px;
+}
+
+.seconds {
+    text-align: center;
+    padding: 6px;
+}
+
+.seconds img {
+    width: 20px;
+    height: 20px;
+}
+
+.start {
+    background: #FF6A6A;
+    border-radius: 12px;
+    padding: 6px;
+    color: white;
+    text-align: center;
+}

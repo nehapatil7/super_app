@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import userImg from '../../Images/userImg.png'
 import News from '../../Components/News'
 import Weather from '../../Components/Weather'
+import Timer from '../../Components/Timer'
 
 function UserHome() {
 
@@ -41,8 +42,8 @@ function UserHome() {
 
                 </div>
             </div>
-            <div className='timer'>
-
+            <div >
+                <Timer />
             </div>
         </div>
 
