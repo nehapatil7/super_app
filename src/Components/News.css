@@ -1,0 +1,27 @@
+.newsImg {
+    height: 450px;
+    width: 450px; 
+    border-radius: 8px;   
+}
+
+.newsTitle {
+    color: white;
+    font-Size: 18px;
+    margin-bottom: 10px;
+}
+
+.newsDate {
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.newsTime {
+    color: white;
+    font-Size: 15px; 
+    margin-Right: 10px; 
+}
+
+.newsDesc {
+    margin-top: 20px;
+}

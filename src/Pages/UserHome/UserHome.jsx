@@ -2,6 +2,7 @@ import React from 'react'
 import './UserHome.css'
 import { useNavigate } from 'react-router-dom'
 import userImg from '../../Images/userImg.png'
+import News from '../../Components/News'
 
 function UserHome() {
 
@@ -49,7 +50,7 @@ function UserHome() {
 
         <div className='right'>
             <div className='news'>
-
+                <News />
             </div>
             <div className='btn-browse'>
                 <button onClick={handelClick}>Browse</button>
