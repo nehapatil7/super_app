@@ -38,7 +38,15 @@
     margin-top: 8px;
 }
 
-.movies p {
+.msg {
+    height: 50px;
+    width: 1250;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.moviesList p {
     color: #FFF;
     font-family: Roboto;
     font-size: 27px;
@@ -48,4 +56,36 @@
     letter-spacing: 0.608px;
     margin-left: 60px;
     margin-top: 10px;
+    width: 500px;
 }
+
+.homepage button {
+    width: 100px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 38.857px;
+    background: #244324;
+    border: #111311;
+    margin-left: 760px;
+    margin-top: 9px;
+    color: #FFF;
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 15.286px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 92.2%; 
+    letter-spacing: 0.526px;
+}
+
+.movie-container {
+    color: white;
+    display: flex;  
+    gap: 20px;
+    padding: 30px;
+    flex-direction: column;
+  }
+  .movies {
+    display: flex;
+    gap: 20px;
+  }
